@@ -74,6 +74,7 @@
     <properties>
         <license.licenseName>gpl_v3</license.licenseName>
         <license.copyrightOwners>Fiji developers</license.copyrightOwners>
+        <maven.javadoc.skip>true</maven.javadoc.skip>
 
         <!-- CRITICAL: Must compile for Java 8 so the bridge loads on legacy Fiji -->
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -113,5 +114,15 @@
             <version>0.33.0</version>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
