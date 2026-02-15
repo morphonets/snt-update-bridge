@@ -64,6 +64,7 @@ public class JavaVersionBridge extends AbstractService implements ImageJService 
     static final int REQUIRED_JAVA_VERSION = 21;
 
     private static final String FIJI_RECOMMENDED_VERSION = "Fiji-Latest";
+    private static final String RELEASE_NOTES_URL = "https://github.com/morphonets/SNT/releases";
     private static final String FIJI_DOWNLOAD_URL = "https://imagej.net/software/fiji/downloads";
     private static final String FORUM_URL = "https://forum.image.sc/tag/snt";
     private static final String UPDATE_SITE_NAME = "Neuroanatomy";
@@ -132,6 +133,8 @@ public class JavaVersionBridge extends AbstractService implements ImageJService 
                 + "<p>This Fiji installation is running <b>Java " + currentVersion
                 + "</b>, but SNT now requires <b>Java " + REQUIRED_JAVA_VERSION
                 + "</b> or newer. SNT commands will not work in this installation.</p>"
+                + "<p>Newer SNT versions are dramatically improved in features, accuracy, "
+                + "and performance. See the <a href='" + RELEASE_NOTES_URL + "'>Release Notes</a> for details.</p>"
                 + "<p>To continue using SNT, download <b>" + FIJI_RECOMMENDED_VERSION + "</b> from "
                 + "<a href='" + FIJI_DOWNLOAD_URL + "'>" + FIJI_DOWNLOAD_URL + "</a>, "
                 + "then subscribe to the <b>Neuroanatomy</b> update site via "
