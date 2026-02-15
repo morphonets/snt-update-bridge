@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>org.scijava</groupId>
         <artifactId>pom-scijava</artifactId>
         <version>38.0.1</version>
-        <relativePath/>
+        <relativePath />
     </parent>
 
     <groupId>org.morphonets</groupId>
     <artifactId>snt-update-bridge</artifactId>
-    <version>0.0.0-SNAPSHOT</version>
+    <version>0.0.0</version>
 
     <name>SNT Java Version Bridge</name>
     <description>
@@ -59,7 +57,7 @@
     <scm>
         <connection>scm:git:https://github.com/morphonets/snt-update-bridge</connection>
         <developerConnection>scm:git:git@github.com:morphonets/snt-update-bridge</developerConnection>
-        <tag>HEAD</tag>
+        <tag>snt-update-bridge-0.0.0</tag>
         <url>https://github.com/morphonets/snt-update-bridge</url>
     </scm>
     <issueManagement>
