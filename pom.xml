@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.scijava</groupId>
+        <artifactId>pom-scijava</artifactId>
+        <version>38.0.1</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>org.morphonets</groupId>
+    <artifactId>snt-update-bridge</artifactId>
+    <version>0.0.0-SNAPSHOT</version>
+
+    <name>SNT Java Version Bridge</name>
+    <description>
+        A Java 8-compiled bridge that warns users when SNT
+        requires a newer Java runtime than what is currently available.
+    </description>
+    <url>https://github.com/morphonets/snt-update-bridge</url>
+    <inceptionYear>2026</inceptionYear>
+    <organization>
+        <name>morphonets</name>
+        <url>https://morphonets.org</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>GNU General Public License v3+</name>
+            <url>https://www.gnu.org/licenses/gpl.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>tferr</id>
+            <name>Tiago Ferreira</name>
+            <roles>
+                <role>lead</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <contributors>
+        <contributor>
+            <name>None</name>
+        </contributor>
+    </contributors>
+    <mailingLists>
+        <mailingList>
+            <name>Image.sc Forum</name>
+            <archive>https://forum.image.sc/tag/snt</archive>
+        </mailingList>
+    </mailingLists>
+
+    <scm>
+        <connection>scm:git:https://github.com/morphonets/snt-update-bridge</connection>
+        <developerConnection>scm:git:git@github.com:morphonets/snt-update-bridge</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/morphonets/snt-update-bridge</url>
+    </scm>
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/morphonets/snt-update-bridge/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/morphonets/snt-update-bridge/actions</url>
+    </ciManagement>
+
+    <properties>
+        <license.licenseName>gpl_v3</license.licenseName>
+        <license.copyrightOwners>Fiji developers</license.copyrightOwners>
+
+        <!-- CRITICAL: Must compile for Java 8 so the bridge loads on legacy Fiji -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <package-name>sc.fiji.snt.bridge</package-name>
+        <main-class>sc.fiji.snt.bridge.JavaVersionBridge</main-class>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>scijava.public</id>
+            <url>https://maven.scijava.org/content/groups/public</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- Minimal dependencies: only what's needed for Service registration + dialog -->
+        <dependency>
+            <groupId>org.scijava</groupId>
+            <artifactId>scijava-common</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>ij</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.imagej</groupId>
+            <artifactId>imagej-common</artifactId>
+            <version>0.33.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
