@@ -110,6 +110,7 @@
             <groupId>net.imagej</groupId>
             <artifactId>imagej-common</artifactId>
             <version>0.33.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>
@@ -119,6 +120,24 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
                     <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.scijava</groupId>
+                            <artifactId>scijava-common</artifactId>
+                            <version>${scijava-common.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <annotationProcessors>
+                        <annotationProcessor>org.scijava.annotations.AnnotationProcessor</annotationProcessor>
+                    </annotationProcessors>
                 </configuration>
             </plugin>
         </plugins>
